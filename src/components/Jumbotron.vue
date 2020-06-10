@@ -3,11 +3,11 @@
         <div class="jumbotron-data">
             <div class="glass-box" v-if="!mobile">
                 <h1>Dein gratis Testpaket</h1>
-                <a href="#" class="greenBtn btn-jumbotron">Wähle Deine Größe</a>
+                <a href="#" class="Btn btn-jumbotron">Wähle Deine Größe</a>
             </div>
             <div class="glass-box-mobile" v-if="mobile">
                 <h1>Dein gratis Testpaket</h1>
-                <a href="#" class="greenBtn btn-jumbotron">Wähle Deine Größe</a>
+                <a href="#" class="Btn btn-jumbotron">Wähle Deine Größe</a>
             </div>
         </div>    
     </div>
@@ -16,8 +16,8 @@
 
 <script>
 
-import desktopImg from '../assets/header-trialbox-desktop.jpg';
-import mobileImg from '../assets/header-trialbox-mobile.jpg';
+import desktopImg from '../assets/images/header-trialbox-desktop.jpg';
+import mobileImg from '../assets/images/header-trialbox-mobile.jpg';
 export default {
     name:'Jumbotron',
     props:{
@@ -35,8 +35,8 @@ export default {
 
 <style lang="scss" scoped>
 @import './shared/main.scss';
-$desktop-img: '../assets/header-trialbox-desktop.jpg';
-$mobile-img: '../assets/header-trialbox-tablet.jpg';
+$desktop-img: '../assets/images/header-trialbox-desktop.jpg';
+$mobile-img: '../assets/images/header-trialbox-tablet.jpg';
 
     .jumbotronImg {
         background: url($desktop-img) no-repeat center;

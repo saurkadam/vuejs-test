@@ -41,7 +41,7 @@ export default {
     },
     methods: {
         renderPic (value) {
-        var images = require.context('../assets/', false, /\.png|.svg$/)
+        var images = require.context('../assets/images/', false, /\.png|.svg$/)
         return images('./' + value)
         }
     }
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./shared/main.scss";
+@import '../scss/app.scss';
     .features-back {
         padding:20px;
         background:$container-light-grey-back;

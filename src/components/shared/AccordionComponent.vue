@@ -52,7 +52,7 @@ export default {
             this.$emit('openStateFinder', this.open)
         },
         renderPic (value) {
-            var images = require.context('../../assets/', false, /\.png|.svg$/)
+            var images = require.context('../../assets/images/', false, /\.png|.svg$/)
             return images('./' + value)
         }
     },

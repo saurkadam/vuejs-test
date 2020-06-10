@@ -37,7 +37,7 @@
                         </ul>
                     </div>
                     <div class="btn-discover">
-                        <a href="#" class="greenBtn btn-discover">Jetzt gratis testen</a>
+                        <a href="#" class="Btn btn-discover">Jetzt gratis testen</a>
                     </div>                
                 </div>
 
@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './shared/main.scss';
+@import '../scss/app.scss';
 .discover-view {
     margin:120px;
 }
@@ -235,7 +235,7 @@ export default {
             flex-grow: inherit;
             flex-wrap: wrap;
             .btn-class {
-                padding: 0 30px;
+                padding: 0 1rem;
                 margin: 5px;
                 background: transparent;
                 border: 1px solid $grey-color;

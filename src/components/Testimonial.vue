@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './shared/main.scss';
+@import '../scss/app.scss';
     .padLeft{
         padding-right: 2em;
     }
