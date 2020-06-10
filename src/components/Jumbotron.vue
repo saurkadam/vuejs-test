@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './shared/main.scss';
+@import '../scss/app.scss';
 $desktop-img: '../assets/images/header-trialbox-desktop.jpg';
 $mobile-img: '../assets/images/header-trialbox-tablet.jpg';
 
