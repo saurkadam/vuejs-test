@@ -232,7 +232,7 @@ export default {
         }
         .btn-group {
             display:flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-grow: inherit;
             flex-wrap: wrap;
             .btn-class {
