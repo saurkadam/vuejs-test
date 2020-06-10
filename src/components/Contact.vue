@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import './shared/main.scss';
+@import '../scss/app.scss';
 
     .contact-section {
         display: flex;

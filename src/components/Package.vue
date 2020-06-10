@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './shared/main.scss';
+@import '../scss/app.scss';
 .package-view {
     display:flex;
     flex-direction: row;

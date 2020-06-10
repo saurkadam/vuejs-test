@@ -7,10 +7,10 @@
     </nav>
     <div class="logos-footer listLinks">
       <div id="trustmark">
-        <img src="../assets/trustmark_180x180.png" class="img" alt="">
+        <img src="../assets/images/trustmark_180x180.png" class="img" alt="">
       </div>
       <div class="logo-img">
-        <img src="../assets/reddot-logo.svg" class="img" alt="">
+        <img src="../assets/images/reddot-logo.svg" class="img" alt="">
       </div>
     </div>
     <div class="copyright">
@@ -36,7 +36,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '../scss/app.scss';
     .footer {
       display:flex;
       justify-content: center;
@@ -83,8 +84,8 @@ export default {
     }
     .logo-img {
       padding-left:0.5em;
-      width:40px;
-      height:40px;
+      width: 60px;
+      height: 45px;
     }
     .img {
       height:100%;

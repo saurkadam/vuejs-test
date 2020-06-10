@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     renderPic (value) {
-      var images = require.context('../assets/', false, /\.png|.svg$/)
+      var images = require.context('../assets/images/', false, /\.png|.svg$/)
       return images('./' + value + '.svg')
     }
   }
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "./shared/main.scss";
+@import '../scss/app.scss';
     .payment-container {
         background:$container-light-grey-back;
         padding:20px;

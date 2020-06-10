@@ -27,7 +27,7 @@ $container-light-grey-back: #f8f8f8;
   @mixin addFontHeader () {
       font-size: 1.5rem;
   }
-  .greenBtn {
+  .Btn {
     justify-content: center;
     height: auto;
     background-color: #00afab;
@@ -46,7 +46,7 @@ $container-light-grey-back: #f8f8f8;
     appearance: none;
     position: relative;
 }
-.greenBtn:hover {
+.Btn:hover {
     background-color: #99dfdd;
     cursor: pointer;
     border-color: #99dfdd;

@@ -24,7 +24,7 @@ import Features from './components/Features'
 import Navbar from './components/Navbar'
 import Discover from './components/Discover'
 import Package from './components/Package'
-import pack from './assets/packageProducts'
+import pack from './assets/json/packageProducts'
 import Jumbotron from './components/Jumbotron'
 
 export default {
@@ -76,6 +76,7 @@ export default {
 </script>
 
 <style>
+@import './scss/app.scss';
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

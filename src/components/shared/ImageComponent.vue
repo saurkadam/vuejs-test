@@ -30,7 +30,7 @@ export default {
     },
     methods: {
         renderPic (value) {
-        var images = require.context('../../assets/', false, /\.png|.svg|.jpg$/)
+        var images = require.context('../../assets/images/', false, /\.png|.svg|.jpg$/)
         return images('./' + value)
         }
     }

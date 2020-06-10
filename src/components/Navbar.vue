@@ -63,8 +63,8 @@
 </template>
 
 <script>
-import image from '../assets/sprites@2x.png';
-import bag from '../assets/bag.png';
+import image from '../assets/images/sprites@2x.png';
+import bag from '../assets/images/bag.png';
 import AlignerComponent from './shared/AlignerComponent'
 import AccordionComponent from './shared/AccordionComponent'
 import ImageComponent from './shared/ImageComponent' 
@@ -168,7 +168,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './shared/main.scss';
+@import '../scss/app.scss';
     .alignedComp {
         display: flex;
         flex-direction: row;

@@ -1,0 +1,21 @@
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 769px) { @content ; }
+   }
+    @else if $point == smallDevice {
+      @media (max-width: 768px) { @content ; }
+   }
+    @else if $point == tablet {
+        @media (max-width: 1024px) { @content ; } 
+    }
+    @else if $point == iphoneX {
+      @media (min-width: 737px) and (max-width: 812px) and (orientation: landscape) { @content ; } 
+    }
+ }
+ @mixin fontChanges () {
+    font-weight: 400;
+    font-style: normal;
+  }
+  @mixin addFontHeader () {
+      font-size: 1.5rem;
+  }
