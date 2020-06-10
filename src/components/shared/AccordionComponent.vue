@@ -58,6 +58,9 @@ export default {
     },
     watch: {
         openAccordion(val, oldVal) {
+            if(val === oldVal) {
+                return
+            }
             this.openPanel()
         }
     }
