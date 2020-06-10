@@ -50,7 +50,6 @@
 import AlignerComponent from './shared/AlignerComponent'
 import ImageComponent from './shared/ImageComponent'
 
-import {bus} from '../main'
 
 export default {
     name: 'Discover',
@@ -106,7 +105,7 @@ export default {
             }
             document.getElementsByClassName('btn-group')[0].children[value].classList.add('active')
             this.imgSrcValue = this.Buttons[value].img
-            bus.$emit('changePackageView', value)
+            this.$emit('changePackageView', value)
         },
 
 

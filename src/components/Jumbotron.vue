@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import {bus} from '../main'
+
 import desktopImg from '../assets/header-trialbox-desktop.jpg';
 import mobileImg from '../assets/header-trialbox-mobile.jpg';
 export default {
@@ -29,9 +29,6 @@ export default {
         return {
             img: this.mobile ? mobileImg : desktopImg
         }
-    },
-    created() {
-        bus.$on('')
     }
 }
 </script>

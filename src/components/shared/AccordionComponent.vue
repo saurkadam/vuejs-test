@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import {bus} from '../../main'
 
 export default {
     name: 'AccordionComponent',
@@ -28,11 +27,14 @@ export default {
         },
         allClose: {
             type: Boolean
+        },
+        openAccordion: {
+            type: Boolean
         }
     },
     data () {
         return {
-            open:false,
+            open: this.openAccordion,
             openImg: 'expand_more.svg',
             closeImg: 'expand_less.svg',
             imgValue: 'expand_less.svg',
@@ -47,22 +49,17 @@ export default {
                 this.imgValue = this.closeImg;
             }
             this.open = !this.open
-            bus.$emit('openStateFinder', this.open)
+            this.$emit('openStateFinder', this.open)
         },
         renderPic (value) {
             var images = require.context('../../assets/', false, /\.png|.svg$/)
             return images('./' + value)
         }
     },
-    created() {
-        bus.$on('open', () => {
+    watch: {
+        openAccordion(val, oldVal) {
             this.openPanel()
-        })
-        bus.$on('allAccordionClose', () => {
-            if(this.allClose) {
-                this.open = false
-            }
-        })
+        }
     }
 }
 </script>

@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import bus from '../main'
 import AlignerComponent from './shared/AlignerComponent'
 import ImageComponent from './shared/ImageComponent'
 import StarRating from 'vue-star-rating'

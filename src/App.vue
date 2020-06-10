@@ -3,9 +3,9 @@
     <!-- <img src="./assets/logo.png"> -->
     <Navbar></Navbar>    
     <Jumbotron :mobile="mobile"></Jumbotron>
-    <Discover :mobile="mobile"></Discover>
+    <Discover :mobile="mobile" @changePackageView="packageChange"></Discover>
     <Features></Features>
-    <Package :data="PackageData"></Package>
+    <Package :data="PackageData" ></Package>
     <Testimonial></Testimonial>
     <Convince></Convince>
     <Contact></Contact>
@@ -27,7 +27,6 @@ import Package from './components/Package'
 import pack from './assets/packageProducts'
 import Jumbotron from './components/Jumbotron'
 
-import {bus} from './main'
 export default {
   name: 'App',
   components: {
@@ -61,6 +60,9 @@ export default {
         getWindowHeight(event) {
             this.windowHeight = document.documentElement.clientHeight
         },
+        packageChange(value) {
+              this.PackageData = pack[value]
+        }
   },
   mounted() {
       this.$nextTick(function() {
@@ -70,12 +72,6 @@ export default {
           this.getWindowHeight()
       })
   },
-  created() {
-    bus.$on('changePackageView', (value) => {
-      console.log('changed', value)
-      this.PackageData = pack[value]
-    })
-  }
 }
 </script>
 

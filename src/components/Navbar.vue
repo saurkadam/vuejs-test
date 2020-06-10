@@ -19,7 +19,7 @@
                     </ul>
                 </nav>
             </div>
-            <AccordionComponent  :showArrow="false">
+            <AccordionComponent @openStateFinder="openStateFinder" :openAccordion="accordionVal" :showArrow="false">
                 <div slot="AccordionData" class="alignedComp"> 
                     <AlignerComponent  direction="column" class="alignComponent" alignedItems="center" :marginProvided="'20px 50px'" justify="center" v-for="(imageNameValue,index) in imageName" :key="index" :padLeft="'0px 0px 0px 40px'">
                         <ImageComponent class="padLeft" slot="left" :imgSrc="imageNameValue.imgSrc" :rounded="false" imgWidth="40px" imgHeight="40px"></ImageComponent>
@@ -68,7 +68,6 @@ import bag from '../assets/bag.png';
 import AlignerComponent from './shared/AlignerComponent'
 import AccordionComponent from './shared/AccordionComponent'
 import ImageComponent from './shared/ImageComponent' 
-import{ bus } from '../main'
 export default {
     name: 'Navbar',
     components: {
@@ -80,6 +79,7 @@ export default {
         return {
             logoImg: image,
             bagImg: bag,
+            accordionVal: false,
             windowWidth: 0,
             windowHeight: 0,
             mobile:this.getWindowWidth(),
@@ -143,9 +143,9 @@ export default {
             this.dropdownLilly = false;
             this.dropdownProduct = true;
             if (!this.openStateDropdown) {
-                bus.$emit('open');
+                this.accordionVal = true
             } else if (this.openStateDropdown && (this.imageName === this.Products)) {
-                bus.$emit('open');
+                this.accordionVal = this.accordionVal ? false : true
             }
             this.imageName = this.Products;
         },
@@ -153,19 +153,16 @@ export default {
             this.dropdownProduct = false;
             this.dropdownLilly = true;
             if (!this.openStateDropdown) {
-                bus.$emit('open');
+                this.accordionVal = true
             } else if (this.openStateDropdown && (this.imageName === this.lillyDoo)) {
-                bus.$emit('open');
+                this.accordionVal = this.accordionVal ? false : true
             }
             this.imageName = this.lillyDoo;
 
+        },
+        openStateFinder(value) {
+            this.openStateDropdown = value
         }
-    },
-    created() {
-            bus.$on('openStateFinder', (value) => {
-                this.openStateDropdown = value
-                console.log(this.openStateDropdown)
-            })
     }
 }
 </script>
