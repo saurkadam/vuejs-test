@@ -1,0 +1,117 @@
+[
+    [
+        {
+            "imgName":"nappyimage.png",
+            "name":"10 LILLYDOO WINDELN",
+            "rating": 4.5,
+            "bracketNum": 12,
+            "listData":[
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+                ]
+        },
+        {
+            "imgName":"lillydoo-pack2.png",
+            "name":"15 FEUCHTTÜCHER MIT 99 % WASSER",
+            "rating": 4.5,
+            "bracketNum": 115,
+            "listData":[
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Natürlich rein, extra mild, Alternative zu 'Wasser & Watte'"
+                ]
+        }
+    ],
+    [
+        {
+            "imgName":"nappyimage.png",
+            "name":"10 LILLYDOO WINDELN",
+            "rating": 4.5,
+            "bracketNum": 92,
+            "listData":[
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+                ]
+        },
+        {
+            "imgName":"lillydoo-pack2.png",
+            "name":"15 FEUCHTTÜCHER MIT 99 % WASSER",
+            "rating": 4.5,
+            "bracketNum": 115,
+            "listData":[
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Natürlich rein, extra mild, Alternative zu 'Wasser & Watte'"
+                ]
+        }
+    ],
+    [
+        {
+            "imgName":"nappyimage.png",
+            "name":"10 LILLYDOO WINDELN",
+            "rating": 4.5,
+            "bracketNum": 329,
+            "listData":[
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+                ]
+        },
+        {
+            "imgName":"lillydoo-pack2.png",
+            "name":"15 SENSITIVE FEUCHTTÜCHER",
+            "rating": 4.5,
+            "bracketNum": 116,
+            "listData":[
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Extra dickes und kompostierbares Tuch"
+                ]
+        }
+    ],
+    [
+        {
+            "imgName":"nappyimage.png",
+            "name":"10 LILLYDOO WINDELN",
+            "rating": 4.5,
+            "bracketNum": 485,
+            "listData":[
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+                ]
+        },
+        {
+            "imgName":"lillydoo-pack1.jpg",
+            "name":"15 SENSITIVE FEUCHTTÜCHER",
+            "rating": 4,
+            "bracketNum": 46,
+            "listData":[
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Extra dickes und kompostierbares Tuch"
+                ]
+        }
+    ],
+    [
+        {
+            "imgName":"nappyimage.png",
+            "name":"10 LILLYDOO WINDELN",
+            "rating": 4.5,
+            "bracketNum": 388,
+            "listData":[
+                "0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz",
+                "Extra weich und super bequem",
+                "Mit unseren Turbo Tunneln für eine ideale Passform und schnelle Absorption"
+                ]
+        },
+        {
+            "imgName":"lillydoo-pack1.jpg",
+            "name":"15 SENSITIVE FEUCHTTÜCHER",
+            "rating": 4,
+            "bracketNum": 46,
+            "listData":[
+                "0 % Parfüme & PEGs, 100 % biologisch abbaubar",
+                "Extra dickes und kompostierbares Tuch"
+                ]
+        }
+    ]
+]

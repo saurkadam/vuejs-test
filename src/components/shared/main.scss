@@ -1,0 +1,57 @@
+//colors
+
+$black-color: #000;
+$white-color:#fff;
+$green-color:#00afab;
+$grey-color:#7c7c7c;
+$font-size-small:0.800rem;
+$container-light-grey-back: #f8f8f8;
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 769px) { @content ; }
+   }
+    @else if $point == smallDevice {
+      @media (max-width: 768px) { @content ; }
+   }
+    @else if $point == tablet {
+        @media (max-width: 1024px) { @content ; } 
+    }
+    @else if $point == iphoneX {
+      @media (min-width: 737px) and (max-width: 812px) and (orientation: landscape) { @content ; } 
+    }
+ }
+ @mixin fontChanges () {
+    font-weight: 400;
+    font-style: normal;
+  }
+  @mixin addFontHeader () {
+      font-size: 1.5rem;
+  }
+  .greenBtn {
+    justify-content: center;
+    height: auto;
+    background-color: #00afab;
+    color: #fafafa;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: cera_proregular,Helvetica,Roboto,Arial,sans-serif;
+    font-size: .9rem;
+    line-height: 1.4375rem;
+    font-weight: 500;
+    padding: .6875rem 1.25rem .5625rem 1.25rem;
+    outline: 0;
+    border: 1px solid #00afab;
+    transition: .3s ease-in-out;
+    margin: .875rem 0 .625rem 0;
+    appearance: none;
+    position: relative;
+}
+.greenBtn:hover {
+    background-color: #99dfdd;
+    cursor: pointer;
+    border-color: #99dfdd;
+    color: #fafafa;
+}
+.hide {
+  display:none !important;
+}
