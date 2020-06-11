@@ -22,7 +22,7 @@
             <AccordionComponent @openStateFinder="openStateFinder" :openAccordion="accordionVal" :showArrow="false">
                 <div slot="AccordionData" class="alignedComp"> 
                     <AlignerComponent  direction="column" class="alignComponent" alignedItems="center" :marginProvided="'20px 50px'" justify="center" v-for="(imageNameValue,index) in imageName" :key="index" :padLeft="'0px 0px 0px 40px'">
-                        <ImageComponent class="padLeft" slot="left" :imgSrc="imageNameValue.imgSrc" :rounded="false" imgWidth="40px" imgHeight="40px"></ImageComponent>
+                        <ImageComponent class="padLeft" slot="left" :imgSrc="imageNameValue.imgSrc" :rounded="false" imgWidth="2.5rem" imgHeight="2.5rem"></ImageComponent>
                         <div slot="right">
                             <h5>{{imageNameValue.headLine}}</h5>
                             <p>{{imageNameValue.description}}</p>
@@ -232,6 +232,12 @@ export default {
         }
     }
     .mobile-layout {
+        .menu {
+            padding-left: 0.5em;
+        }
+        .mobile-logo {
+            padding-left: 0.5em;
+        }
         .menu:hover {
             cursor: pointer;
         }

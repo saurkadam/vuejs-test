@@ -1,46 +1,18 @@
 <template>
     <div class="discover-view" id="select">
-        <div class="headers mobile">
-            <h2>Entdecke unsere Hautfreundlichkeit</h2>
-            <h5 class="subtitle">Wähle Deine Größe</h5>
-            <div class="btn-group" v-if="mobile">
-                <button v-for="(button,index) in Buttons" :class="{ 'active': index === valActive }" v-on:click="selectSize($event,index)" :key="index" class="btn-class">
-                    <div>
-                        <h4>{{index + 1}}</h4>
-                        <p>{{button.desc}}</p>
-                    </div>
-                </button>
-            </div>             
-        </div>
+        <UpperAreaDiscover :Buttons="Buttons" @changePackageFromButtonGroup="changePackageFromButtonGroup" v-if="mobile"/>
         <AlignerComponent  direction="row" class="alignComponent" alignedItems="center" justify="center">
-            <ImageComponent class="padLeft" slot="left" :imgSrc="imgSrcValue" :rounded="false"></ImageComponent>
+            <ImageComponent class="imageDiscover" slot="left" :imgSrc="imgSrcValue" :rounded="false"></ImageComponent>
             <div slot="right" class="top-header">
-                <div class="section-two">
-                    <div class="headers desktop">
-                        <h2>Entdecke unsere Hautfreundlichkeit</h2>
-                        <h5 class="subtitle">Wähle Deine Größe</h5>                
-                    </div>
-                    <div class="btn-group desktop">
-                        <button v-for="(button,index) in Buttons" :class="{ 'active': index === valActive }" v-on:click="selectSize($event,index)" :key="index" class="btn-class">
-                            <div>
-                                <h4>{{index + 1}}</h4>
-                                <p>{{button.desc}}</p>
-                            </div>
-                        </button>
-                    </div>
-                    <div class="description">
-                        <p>Teste jetzt unsere hautfreundlichen Windeln und erhalte unsere Feuchttücher mit 99 % Wasser zu Größe 1 - 3 oder die Sensitiven Feuchttücher zu Größe 4 - 5.</p>
-                        <ul>
-                            <li>Wir zahlen die Produkte, Du nur den Versand.</li>
-                            <li class="active">Automatischer Übergang ins jederzeit kündbare Windel-Abo für 49,50 € pro Lieferung.</li>
-                            <li>Preise inkl. MwSt., ggf. zzgl. <span class="active"> Versandkosten</span></li>
-                        </ul>
-                    </div>
-                    <div class="btn-discover">
-                        <a href="#" class="Btn btn-discover">Jetzt gratis testen</a>
-                    </div>                
+                <UpperAreaDiscover :Buttons="Buttons"  @changePackageFromButtonGroup="changePackageFromButtonGroup" v-if="!mobile"/>
+                <div>
+                    <DiscoverDescription/>
                 </div>
-
+                <div class="discover-cta">
+                    <div>
+                        <a href="#" class="Btn btn-discover">Jetzt gratis testen</a>
+                    </div>
+                </div>
             </div>
         </AlignerComponent>
     </div>
@@ -49,7 +21,9 @@
 <script>
 import AlignerComponent from './shared/AlignerComponent'
 import ImageComponent from './shared/ImageComponent'
-
+import ButtonGroup from './shared/DiscoverComponent/ButtonGroup'
+import DiscoverDescription from './shared/DiscoverComponent/DiscoverDescription'
+import UpperAreaDiscover from './shared/DiscoverComponent/UpperAreaDiscover'
 
 export default {
     name: 'Discover',
@@ -60,10 +34,14 @@ export default {
     },
     components: {
         AlignerComponent,
-        ImageComponent
+        ImageComponent,
+        ButtonGroup,
+        DiscoverDescription,
+        UpperAreaDiscover
     },
     data () {
         return {
+            imgSrcValue: 'lillydoo-testpaket-10.jpg',
             Buttons: [
                 {
                     value:'1',
@@ -91,173 +69,110 @@ export default {
                     img:'lillydoo-testpaket-50.jpg'
                 },                
                 
-            ],
-            imgSrcValue: 'lillydoo-testpaket-10.jpg',
-            active: false,
-            valActive:0,
-
+            ]
         }
     },
     methods: {
-        selectSize(event,value){
-            for(let i=0;i < document.getElementsByClassName('btn-group')[0].children.length;i++) {
-                	document.getElementsByClassName('btn-group')[0].children[i].classList.remove('active')
-            }
-            document.getElementsByClassName('btn-group')[0].children[value].classList.add('active')
+        changePackageFromButtonGroup(value) {
             this.imgSrcValue = this.Buttons[value].img
-            this.$emit('changePackageView', value)
-        },
-
-
-    },
-
+            this.$emit('sendtoApp', value)
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../scss/app.scss';
 .discover-view {
-    margin:120px;
-}
-.headers, .description {
-    text-align: left;
-    h2 {
-        @include fontChanges();
-    }
-
-}
-.desktop {
-    display: block;
-}
-.mobile {
-    display: none;
-}
-.subtitle {
-    text-transform: uppercase;
-    color: $grey-color;
-    font-size: $font-size-small;
-    @include fontChanges();
-}
-
-.section-two{
-    padding: 0 2rem;
-    .description {
-        text-align: left;
-        p{
-            font-size:$font-size-small;
-        }
-        ul {
-            li {
-                font-size:$font-size-small;  
-            }
-        }
-    }
-}
-.mobile-hack {
-    display:flex;
-    flex-direction: column;
+    margin: 5rem 4rem;
 }
 .active {
     color: $green-color;
 }
-@include breakpoint(iphoneX) {
-    .btn-group {
-        justify-content: flex-start;
-        .btn-class {
-            margin: 5px 0;
-        }
-    }
+.headers {
+    text-align: left;
 }
-.btn-group {
+.imageDiscover {
+    max-width: 60%;
+    padding-right: 10em;
+}
+.top-header {
+    max-width: 28%;
     display:flex;
-    justify-content: space-between;
-    flex-grow: inherit;
-    flex-wrap: wrap;
-    .btn-class {
-        background: transparent;
-        border: 1px solid $grey-color;
-        color: $grey-color;
-        flex: 0 1 auto;
-        div {
-            h4 {
-                font-size: 1.2rem;
-                margin:10px 0 0 0;
-
-            }
-            p {
-                font-size: 0.75rem;
-                margin: 10px 0;
-            }
+    flex-direction: column;
+    align-items: flex-start;
+}
+.description {
+    text-align: left;
+    p{
+        font-size:$font-size-small;
+    }
+    ul {
+        li {
+            font-size:$font-size-small;  
         }
     }
-    .btn-class.active{
-        background: $green-color;
-        color: $white-color;
-        border: 0.5px solid $green-color;
-    }
-    .btn-class.focus{
-        outline: $green-color auto 1px !important;
-    }
-    .btn-class:hover{
-        background: $green-color;
-        color: $white-color;
-        border:0.5px solid $green-color;
+}
+
+.discover-view {
+    margin: 0;
+}
+.section-two {
+    display:flex;
+    flex-direction: column;
+}
+.mobile {
+    display: block;
+    padding: 0 1rem;
+}
+.alignComponent {
+    .padLeft {
+        padding: 0 !important;
     }
 }
-    .btn-discover {
-        display:flex;
-        justify-content: center;
+.discover-cta {
+    width: 100%;
+    div {
+        display: flex;
         a{
             width: 100%;
         }
     }
-    @include breakpoint(smallDevice) {
-        .discover-view {
-            margin: 0;
-        }
-        .section-two {
-            display:flex;
-            flex-direction: column;
-        }
-        .mobile {
-            display: block;
-            padding: 0 2rem;
-        }
-        .alignComponent {
-            flex-direction: column !important;
-            .padLeft {
-                padding: 0 !important;
-            }
-        }
-        .btn-group {
-            display:flex;
-            justify-content: flex-start;
-            flex-grow: inherit;
-            flex-wrap: wrap;
-            .btn-class {
-                padding: 0 0.5rem;
-                margin: 5px;
-                background: transparent;
-                border: 1px solid $grey-color;
-                color: $grey-color;
-                flex: 0 1 auto;
-                div {
-                    h4 {
-                        font-size: 1.2rem;
-                        margin:10px 0 0 0;
-
-                    }
-                    p {
-                        font-size: 0.75rem;
-                        margin: 5px 0;
-                        width: 65px;
-                    }
-                }
-            }
-        }
-        .desktop {
-            display: none;
-        }
+    padding: 0 1rem;
+}
+@media (max-width: 1024px) {
+    .top-header  {
+        max-width: 45%;
     }
+    .imageDiscover{ 
+        padding-right: 5em;
+    }
+}
+@include breakpoint(smallDevice) {
+    .discover-view {
+        margin: 5rem 2rem;
+    }
+    .alignComponent {
+        flex-direction: column !important;
+    }
+    .top-header {
+        max-width: 100%;
+    }
+    .imageDiscover {
+        max-width: 100%;
+        padding-right:0;
+    }
+    .discover-cta {
+        width: 100%;
+        div {
+            display: flex;
+            a{
+                width: 80%;
+            }
+        }
+        padding: 0 1rem;
+    }
+}
+
 
 </style>

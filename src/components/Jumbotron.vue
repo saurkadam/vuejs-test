@@ -54,10 +54,11 @@ $mobile-img: '../assets/images/header-trialbox-tablet.jpg';
         align-items: center;
     }
     .glass-box {
-        width: 40%;
+        max-width: 60%;
         right: 40px;
         height: 25%;
         display: flex;
+        padding: 2rem;
         flex-direction: column;
         justify-content: center;
         background: rgba(255, 255, 255, 0.65);

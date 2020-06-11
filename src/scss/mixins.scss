@@ -11,6 +11,9 @@
     @else if $point == iphoneX {
       @media (min-width: 737px) and (max-width: 812px) and (orientation: landscape) { @content ; } 
     }
+    @else if $point == phones {
+      @media (max-width: 450px)  { @content ; } 
+    }
  }
  @mixin fontChanges () {
     font-weight: 400;

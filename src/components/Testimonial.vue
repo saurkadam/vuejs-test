@@ -2,8 +2,8 @@
     <div class="testimonial-back">
         <div>
             <h2 class="header-testimonial">Was andere über unsere Windeln sagen</h2>
-            <AlignerComponent direction="row" class="alignedComp" alignedItems="center" :marginProvided="'20px 20px'" justify="center" v-for="(imageNameValue,index) in imageName" :key="index" :padLeft="'0px 0px 0px 40px'">
-                <ImageComponent class="padLeft" slot="left" :imgSrc="imageNameValue.imgSrc" :rounded="true" imgWidth="100px" imgHeight="100px"></ImageComponent>
+            <AlignerComponent direction="row" class="alignedComp" alignedItems="center" :marginProvided="'20px 10rem'" justify="center" v-for="(imageNameValue,index) in imageName" :key="index" :padLeft="'0px 0px 0px 40px'">
+                <ImageComponent class="padLeft" slot="left" :imgSrc="imageNameValue.imgSrc" :rounded="true" imgWidth="12rem" imgHeight="8rem"></ImageComponent>
                 <div class="info" slot="right">
                     <p class="data-info">{{imageNameValue.data}}</p>
                     <div class="nameHeadline">
@@ -54,6 +54,8 @@ export default {
 @import '../scss/app.scss';
     .padLeft{
         padding-right: 2em;
+        box-sizing: border-box;
+        margin: 0.5em;
     }
     .info {
         display: flex;
@@ -98,15 +100,19 @@ export default {
         div {
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
     }
-    .alignedComp {
-        max-width: 60%;
+    @include breakpoint(smallDevice) {
+        .alignComponents {
+            margin: 10px 5rem !important;
+        }    
     }
-    @include breakpoint(tablet) {
+    @include breakpoint(phones) {
+        .alignComponents {
+            margin: 20px 20px !important;
+        }
         .alignedComp {
-            max-width:100%; 
-        } 
+            max-width: 100%;
+        }
     }
 </style>
