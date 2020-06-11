@@ -97,7 +97,7 @@ export default {
     padding-right: 10em;
 }
 .top-header {
-    max-width: 35%;
+    max-width: 28%;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
@@ -114,7 +114,9 @@ export default {
     }
 }
 
-
+.discover-view {
+    margin: 0;
+}
 .section-two {
     display:flex;
     flex-direction: column;
@@ -136,7 +138,6 @@ export default {
             width: 100%;
         }
     }
-    padding: 0 1rem;
 }
 @media (max-width: 1024px) {
     .top-header  {
@@ -168,13 +169,9 @@ export default {
                 width: 80%;
             }
         }
-        padding: 0 1rem;
     }
 }
-@include breakpoint(phones) {
-    .discover-view {
-        margin: 5rem 1em;
-    }
-}
+
+
 
 </style>
