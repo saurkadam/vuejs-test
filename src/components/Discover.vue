@@ -1,5 +1,5 @@
 <template>
-    <div class="discover-view">
+    <div class="discover-view" id="select">
         <div class="headers mobile">
             <h2>Entdecke unsere Hautfreundlichkeit</h2>
             <h5 class="subtitle">Wähle Deine Größe</h5>

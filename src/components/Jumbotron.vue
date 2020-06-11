@@ -1,13 +1,13 @@
 <template>
-    <div  class="jumbotronImg">
+    <div id="jumbo" class="jumbotronImg">
         <div class="jumbotron-data">
             <div class="glass-box" v-if="!mobile">
                 <h1>Dein gratis Testpaket</h1>
-                <a href="#" class="Btn btn-jumbotron">Wähle Deine Größe</a>
+                <a href="#" v-scroll-to="'#select'" class="Btn btn-jumbotron">Wähle Deine Größe</a>
             </div>
             <div class="glass-box-mobile" v-if="mobile">
                 <h1>Dein gratis Testpaket</h1>
-                <a href="#" class="Btn btn-jumbotron">Wähle Deine Größe</a>
+                <a href="#" v-scroll-to="'#select'" class="Btn btn-jumbotron">Wähle Deine Größe</a>
             </div>
         </div>    
     </div>

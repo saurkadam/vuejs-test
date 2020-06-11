@@ -2,7 +2,7 @@
     <div>
         <div class="upperSection">
             <h2 class="convince-urself">Überzeug Dich selbst</h2>
-            <a href="#" class="Btn">Jetzt gratis testen</a>
+            <a href="#" v-scroll-to="'#navigation'" class="Btn">Jetzt gratis testen</a>
         </div>
         <div class="fox" :style="{ backgroundImage: 'url(' + img + ')' }">
         </div>
