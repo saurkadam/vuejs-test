@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div  v-if="!mobile">
+    <div id="navigation">
+        <div   v-if="!mobile">
             <div class="normal-layout">
                 <div class="logo-wrapper">
                     <div class="logo-image" :style="{ backgroundImage: 'url(' + logoImg + ')' }"/>

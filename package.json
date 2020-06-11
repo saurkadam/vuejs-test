@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@vue/cli-service": "^4.4.1",
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-unit-jest": "^4.4.1",
