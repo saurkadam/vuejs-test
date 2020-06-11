@@ -52,6 +52,7 @@ export default {
     flex-wrap: wrap;
     .btn-class {
         background: transparent;
+        cursor:pointer;
         border: 1px solid $grey-color;
         color: $grey-color;
         padding: 0 1rem;
@@ -92,6 +93,7 @@ export default {
             flex-grow: inherit;
             flex-wrap: wrap;
             .btn-class {
+                cursor:pointer;
                 padding: 0 0.5rem;
                 margin: 5px;
                 width: 30.33%;
