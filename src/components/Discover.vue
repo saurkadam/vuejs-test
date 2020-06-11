@@ -174,6 +174,7 @@ export default {
     flex-grow: inherit;
     flex-wrap: wrap;
     .btn-class {
+        cursor: pointer;
         background: transparent;
         border: 1px solid $grey-color;
         color: $grey-color;
@@ -235,6 +236,7 @@ export default {
             flex-grow: inherit;
             flex-wrap: wrap;
             .btn-class {
+                cursor: pointer;
                 padding: 0 0.5rem;
                 margin: 5px;
                 background: transparent;
