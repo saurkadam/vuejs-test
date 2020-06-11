@@ -3,7 +3,7 @@
         <h2 class="head">Dein Testpaket enthält</h2>
         <div class="package-view">
             <AlignerComponent  direction="row" class="alignComponent" alignedItems="center" :marginProvided="'20px 50px'" justify="center"  v-for="(data,index) in data" :key="index">
-                <ImageComponent class="padLeft" slot="left" :imgSrc="data.imgName" :rounded="false" imgWidth="auto" imgHeight="auto"></ImageComponent>
+                <ImageComponent class="padLeft" slot="left" :imgSrc="data.imgName" :rounded="false" imgWidth="10rem" imgHeight="10rem"></ImageComponent>
                 <div slot="right" class="side-sect">
                     <h4 class="header">{{data.name}}</h4>
                     <div class="star-block">     
@@ -45,6 +45,9 @@ export default {
             type: Array
         }
     },
+    watch: {
+        
+    },
     data() {
         return {
         }
@@ -83,6 +86,7 @@ export default {
 }
 .header {
     margin:0;
+    text-align: left;
     @include fontChanges();
 }
 .star-block {
@@ -101,6 +105,7 @@ export default {
 .head {
     @include fontChanges(); 
 }
+
 @include breakpoint(smallDevice) {
     .package-view {
         flex-direction: column;
@@ -108,11 +113,17 @@ export default {
         align-items: center;
     }
     .padLeft {
-        padding: 0em;
-    }
-    .alignComponents{ 
-        margin: 0 !important;
+        padding-right: 8em;
     }
 
+}
+@include breakpoint(phones) {
+    .padLeft {
+        padding-right: 0em !important;
+        max-width: 15em !important;
+    }
+    .alignComponents{ 
+        margin: 0 30px !important;
+    }
 }
 </style>

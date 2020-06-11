@@ -1,5 +1,5 @@
 <template>
-  <div  v-bind:style="{width:imgWidth,height:imgHeight}">
+  <div  v-bind:style="{maxWidth:imgWidth,maxHeight:imgHeight}">
     <img :src="renderPic(imgSrc)" alt="" :class="{'rounded':rounded}">
   </div>
 </template>

@@ -3,7 +3,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <Navbar></Navbar>    
     <Jumbotron :mobile="mobile"></Jumbotron>
-    <Discover :mobile="mobile" @changePackageView="packageChange"></Discover>
+    <Discover :mobile="mobile" @sendtoApp="packageChange"></Discover>
     <Features></Features>
     <Package :data="PackageData" ></Package>
     <Testimonial></Testimonial>
@@ -61,6 +61,7 @@ export default {
             this.windowHeight = document.documentElement.clientHeight
         },
         packageChange(value) {
+              console.log(value);
               this.PackageData = pack[value]
         }
   },
