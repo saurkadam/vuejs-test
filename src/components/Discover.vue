@@ -162,6 +162,7 @@ export default {
         width: 100%;
         div {
             display: flex;
+            justify-content: center;
             a{
                 width: 80%;
             }
