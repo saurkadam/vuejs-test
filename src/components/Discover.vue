@@ -97,7 +97,7 @@ export default {
     padding-right: 10em;
 }
 .top-header {
-    max-width: 28%;
+    max-width: 35%;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
@@ -114,9 +114,6 @@ export default {
     }
 }
 
-.discover-view {
-    margin: 0;
-}
 .section-two {
     display:flex;
     flex-direction: column;
