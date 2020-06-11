@@ -97,7 +97,7 @@ export default {
     padding-right: 10em;
 }
 .top-header {
-    max-width: 28%;
+    max-width: 35%;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
@@ -114,9 +114,7 @@ export default {
     }
 }
 
-.discover-view {
-    margin: 0;
-}
+
 .section-two {
     display:flex;
     flex-direction: column;
@@ -150,7 +148,7 @@ export default {
 }
 @include breakpoint(smallDevice) {
     .discover-view {
-        margin: 5rem 2rem;
+        margin: 5rem 2em;
     }
     .alignComponent {
         flex-direction: column !important;
@@ -173,6 +171,10 @@ export default {
         padding: 0 1rem;
     }
 }
-
+@include breakpoint(phones) {
+    .discover-view {
+        margin: 5rem 1em;
+    }
+}
 
 </style>
