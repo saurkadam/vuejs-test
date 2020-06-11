@@ -146,7 +146,7 @@ export default {
 }
 @include breakpoint(smallDevice) {
     .discover-view {
-        margin: 5rem 2em;
+        margin: 5rem 1em;
     }
     .alignComponent {
         flex-direction: column !important;
@@ -164,7 +164,7 @@ export default {
             display: flex;
             justify-content: center;
             a{
-                width: 80%;
+                width: 100%;
             }
         }
     }
